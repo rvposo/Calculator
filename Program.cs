@@ -4,6 +4,11 @@ class Program
 {
     static void Main(string[] args)
     {
+       Sum();
+
+    }
+    static void Sum()
+    {
         Console.Clear();
 
         Console.WriteLine("First value: ");
@@ -17,8 +22,6 @@ class Program
 
         float result = firstValue + secondValue;
         Console.WriteLine($"Sum output is: {result}");
-
     }
-
 
 }
