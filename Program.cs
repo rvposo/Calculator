@@ -4,6 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
+     Console.ReadKey();
      Menu();
 
     }
@@ -15,13 +16,14 @@ class Program
         Console.WriteLine("2 - Sub");
         Console.WriteLine("3 - Div");
         Console.WriteLine("4 - Multi");
+        Console.WriteLine("5 - Exit");
 
         Console.WriteLine("Choose your option: ");
         int option = int.Parse(Console.ReadLine());
 
-
-         
+        
           switch(option){
+
              case 1:
                 Sum();
                 break;
@@ -37,8 +39,17 @@ class Program
              case 4:
                 Multi();
                 break;
-                  
-          }
+
+             case 5:
+             System.Environment.Exit(0);
+             break;
+
+
+            default:
+               Menu();
+               break;
+
+        }
     }
     static void Sum()
     {
@@ -56,6 +67,7 @@ class Program
         float result = firstValue + secondValue;
         Console.WriteLine($"Sum output is: {result}");
         Console.ReadKey();
+        Menu();
     }
 
     static void Sub()
@@ -74,6 +86,7 @@ class Program
         float result = firstValue - secondValue;
         Console.WriteLine($"Sub output is: {result}");
         Console.ReadKey();
+        Menu();
     }
 
     static void Division(){
@@ -90,6 +103,7 @@ class Program
 
         Console.WriteLine($"Division result is {division}");
         Console.ReadKey();
+        Menu();
     }
 
     static void Multi()
@@ -107,6 +121,7 @@ class Program
         Console.WriteLine($"Multi result is {multi}");
 
         Console.ReadKey();
+        Menu();
     }
 
 }
